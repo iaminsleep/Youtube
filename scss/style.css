@@ -83,6 +83,7 @@ body {
   background: transparent;
   border: none;
   padding: 12px 23px;
+  width: 100%;
 }
 
 .search__group .search__button {
@@ -123,10 +124,8 @@ body {
   margin-right: 50px;
 }
 
-.icons__group .icon__link .icon__button-video,
-.icons__group .icon__link .icon__button-apps,
-.icons__group .icon__link .icon__button-notifications {
-  opacity: 0.3;
+.icon {
+  opacity: 0.5;
 }
 
 .user {

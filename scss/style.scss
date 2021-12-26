@@ -53,6 +53,7 @@ body {
     background: transparent;
     border: none;
     padding: 12px 23px;
+    width: 100%;
   }
   .search__button {
     width: 19px;
@@ -75,12 +76,11 @@ body {
     &:not(:last-child) {
       margin-right: 50px;
     }
-    .icon__button-video,
-    .icon__button-apps,
-    .icon__button-notifications {
-      opacity: 0.3;
-    }
   }
+}
+
+.icon {
+  opacity: 0.5;
 }
 
 .user {
