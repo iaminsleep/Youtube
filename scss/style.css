@@ -42,7 +42,7 @@ body {
   -webkit-box-align: inherit;
       -ms-flex-align: inherit;
           align-items: inherit;
-  margin-right: 20px;
+  margin-right: 32px;
   cursor: pointer;
 }
 

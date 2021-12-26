@@ -27,7 +27,7 @@ body {
   background: $white;
   border: none;
   @include flex(column, space-between, inherit);
-  margin-right: 20px;
+  margin-right: 32px;
   cursor: pointer;
   .menu__button-line {
     display: block;
