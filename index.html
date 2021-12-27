@@ -7,6 +7,12 @@
     <link rel="stylesheet" href="scss/style.css" />
     <link rel="stylesheet" href="scss/normalize.css" />
     <link rel="icon" href="img/icons/favicon.svg" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Mulish:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
     <title>Youtube</title>
   </head>
   <body>
@@ -17,7 +23,11 @@
         <span class="menu__button-line"></span>
       </button>
       <a href="index.html" class="logo">
-        <img src="img/icons/youtube.svg" alt="YouTube logo" />
+        <img
+          type="image/svg+xml"
+          src="img/icons/youtube.svg"
+          alt="YouTube logo"
+        />
       </a>
       <div class="search__group">
         <input
@@ -50,7 +60,11 @@
         </a>
       </div>
       <a href="#" class="user">
-        <img src="img/avatar.jpg" alt="User Avatar" class="user__avatar" />
+        <img
+          src="img/avatars/user/avatar.jpg"
+          alt="User Avatar"
+          class="user__avatar"
+        />
       </a>
       <!-- /.user__avatar -->
     </header>
@@ -60,14 +74,159 @@
           <ul class="main__nav-menu">
             <li class="main__nav-menu--item">
               <a href="#" class="icon__link">
-                <svg class="icon icon__button-home" width="20" height="19">
+                <svg class="icon icon__button-home" width="20" height="20">
                   <use xlink:href="img/icons/icons.svg#home"></use>
                 </svg>
                 <span class="main__nav-text">Home</span>
               </a>
             </li>
+            <li class="main__nav-menu--item">
+              <a href="#" class="icon__link">
+                <svg class="icon icon__button-trending" width="20" height="20">
+                  <use xlink:href="img/icons/icons.svg#trending"></use>
+                </svg>
+                <span class="main__nav-text">Trending</span>
+              </a>
+            </li>
+            <li class="main__nav-menu--item">
+              <a href="#" class="icon__link">
+                <svg
+                  class="icon icon__button-subscriptions"
+                  width="20"
+                  height="19"
+                >
+                  <use xlink:href="img/icons/icons.svg#subscriptions"></use>
+                </svg>
+                <span class="main__nav-text">Subscriptions</span>
+              </a>
+            </li>
+            <li class="main__nav-menu--item">
+              <a href="#" class="icon__link">
+                <svg class="icon icon__button-library" width="20" height="20">
+                  <use xlink:href="img/icons/icons.svg#library"></use>
+                </svg>
+                <span class="main__nav-text">Library</span>
+              </a>
+            </li>
+            <li class="main__nav-menu--item">
+              <a href="#" class="icon__link">
+                <svg class="icon icon__button-history" width="20" height="20">
+                  <use xlink:href="img/icons/icons.svg#history"></use>
+                </svg>
+                <span class="main__nav-text">History</span>
+              </a>
+            </li>
+            <li class="main__nav-menu--item">
+              <a href="#" class="icon__link">
+                <svg
+                  class="icon icon__button-watch-later"
+                  width="20"
+                  height="20"
+                >
+                  <use xlink:href="img/icons/icons.svg#watch-later"></use>
+                </svg>
+                <span class="main__nav-text">Watch later</span>
+              </a>
+            </li>
+            <li class="main__nav-menu--item">
+              <a href="#" class="icon__link">
+                <svg
+                  class="icon icon__button-favourites"
+                  width="20"
+                  height="20"
+                >
+                  <use xlink:href="img/icons/icons.svg#favourites"></use>
+                </svg>
+                <span class="main__nav-text">Favourites</span>
+              </a>
+            </li>
+            <li class="main__nav-menu--item">
+              <a href="#" class="icon__link">
+                <svg
+                  class="icon icon__button-liked-videos"
+                  width="20"
+                  height="20"
+                >
+                  <use xlink:href="img/icons/icons.svg#liked-videos"></use>
+                </svg>
+                <span class="main__nav-text">Liked videos</span>
+              </a>
+            </li>
+            <li class="main__nav-menu--item">
+              <a href="#" class="icon__link">
+                <svg class="icon icon__button-music" width="20" height="20">
+                  <use xlink:href="img/icons/icons.svg#music"></use>
+                </svg>
+                <span class="main__nav-text">Music</span>
+              </a>
+            </li>
+            <li class="main__nav-menu--item">
+              <a href="#" class="icon__link">
+                <svg class="icon icon__button-games" width="20" height="20">
+                  <use xlink:href="img/icons/icons.svg#games"></use>
+                </svg>
+                <span class="main__nav-text">Games</span>
+              </a>
+            </li>
+            <li class="main__nav-menu--item">
+              <a href="#" class="icon__link">
+                <svg class="icon icon__button-show-more" width="14" height="8">
+                  <use xlink:href="img/icons/icons.svg#show-more"></use>
+                </svg>
+                <span class="main__nav-text">Show more</span>
+              </a>
+            </li>
           </ul>
         </nav>
+        <h2 class="nav__title">Subscriptions</h2>
+        <ul class="main__nav-menu">
+          <li class="main__nav-menu--item">
+            <a href="#" class="icon__link">
+              <img src="img/avatars/gussie.png" alt="" class="user__avatar" />
+              <span class="main__nav-text">Gussie Singleton</span>
+            </a>
+          </li>
+          <li class="main__nav-menu--item">
+            <a href="#" class="icon__link">
+              <img src="img/avatars/nora.png" alt="" class="user__avatar" />
+              <span class="main__nav-text">Nora Francis</span>
+            </a>
+          </li>
+          <li class="main__nav-menu--item">
+            <a href="#" class="icon__link">
+              <img src="img/avatars/belle.png" alt="" class="user__avatar" />
+              <span class="main__nav-text">Belle Briggs</span>
+            </a>
+          </li>
+          <li class="main__nav-menu--item">
+            <a href="#" class="icon__link">
+              <img src="img/avatars/eunice.png" alt="" class="user__avatar" />
+              <span class="main__nav-text">Eunice Cortez</span>
+            </a>
+          </li>
+          <li class="main__nav-menu--item">
+            <a href="#" class="icon__link">
+              <img src="img/avatars/emma.png" alt="" class="user__avatar" />
+              <span class="main__nav-text">Emma Hanson</span>
+            </a>
+          </li>
+          <li class="main__nav-menu--item">
+            <a href="#" class="icon__link">
+              <img src="img/avatars/leah.png" alt="" class="user__avatar" />
+              <span class="main__nav-text">Leah Berry</span>
+            </a>
+          </li>
+        </ul>
+        <ul class="main__nav-menu">
+          <li class="main__nav-menu--item">
+            <a href="#" class="icon__link">
+              <svg class="icon icon__button-settings" width="19" height="20">
+                <use xlink:href="img/icons/icons.svg#settings"></use>
+              </svg>
+              <span class="main__nav-text">Settings</span>
+            </a>
+          </li>
+        </ul>
       </aside>
     </div>
   </body>

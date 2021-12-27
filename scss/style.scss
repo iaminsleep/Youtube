@@ -1,5 +1,7 @@
 $white: #fff;
 $black: #1f2022;
+$grey: #898989;
+$red: #ff0000;
 
 @mixin flex($flexDirection, $justifyContent, $alignItems) {
   display: flex;
@@ -13,12 +15,15 @@ $black: #1f2022;
 }
 
 body {
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: "Mulish", sans-serif;
+  font-size: 16px;
+  font-weight: 400px;
 }
 
 .header {
   padding: 20px 70px 20px 32px;
   @include flex(inherit, inherit, center);
+  margin-bottom: 30px;
 }
 
 .menu__button {
@@ -71,23 +76,68 @@ body {
 .icons__group {
   @include flex(row, inherit, center);
   margin-left: auto;
-  .icon__link {
-    text-decoration: none;
-    &:not(:last-child) {
-      margin-right: 50px;
-    }
+  .icon__link:not(:last-child) {
+    margin-right: 50px;
   }
 }
 
 .icon {
-  opacity: 0.5;
+  opacity: 0.4;
+}
+
+.icon__link {
+  text-decoration: none;
+  &:hover {
+    .main__nav-text {
+      color: $red;
+    }
+    .icon {
+      fill: $red;
+      opacity: 0.7;
+    }
+  }
 }
 
 .user {
   margin-left: 45px;
+}
+
+.user__avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+}
+
+.sidebar {
+  margin-left: 32px;
+}
+
+.nav__title {
+  font-style: normal;
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 23px;
+  margin-bottom: 30px;
+}
+
+.main__nav-menu {
+  margin-top: 0;
+  margin-bottom: 60px;
+  list-style: none;
+  padding: 0;
+  .icon__link {
+    display: flex;
+    align-items: center;
+  }
+  .main__nav-menu--item {
+    margin-bottom: 28px;
+  }
+  .main__nav-text {
+    padding-left: 14px;
+    color: $grey;
+  }
   .user__avatar {
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
+    width: 26px;
+    height: 26px;
   }
 }
