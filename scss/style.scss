@@ -2,12 +2,19 @@ $white: #fff;
 $black: #1f2022;
 $grey: #898989;
 $red: #ff0000;
+$lightgrey: #f9f9f9;
 
 @mixin flex($flexDirection, $justifyContent, $alignItems) {
   display: flex;
   flex-direction: $flexDirection;
   justify-content: $justifyContent;
   align-items: $alignItems;
+}
+
+@mixin avatar($width, $height) {
+  width: $width;
+  height: $height;
+  border-radius: 50%;
 }
 
 * {
@@ -20,10 +27,20 @@ body {
   font-weight: 400px;
 }
 
+.button {
+  cursor: pointer;
+}
+
 .header {
   padding: 20px 70px 20px 32px;
   @include flex(inherit, inherit, center);
-  margin-bottom: 30px;
+  /* Настройки для фиксированной позиции шапки*/
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: $white;
+  z-index: 2; /* z-index определяет порядок элемента на странице, таким образом шапка будет точно поверх остального контента */
 }
 
 .menu__button {
@@ -33,7 +50,6 @@ body {
   border: none;
   @include flex(column, space-between, inherit);
   margin-right: 32px;
-  cursor: pointer;
   .menu__button-line {
     display: block;
     width: 20px;
@@ -44,7 +60,7 @@ body {
 }
 
 .logo {
-  margin-right: 169px;
+  margin-right: 144px;
   .icon {
     opacity: 1;
     width: 116px;
@@ -73,7 +89,6 @@ body {
     padding: 0;
     .search__button-icon {
       fill: $black;
-      cursor: pointer;
     }
   }
 }
@@ -105,16 +120,30 @@ body {
 
 .user {
   margin-left: 45px;
-}
-
-.user__avatar {
-  width: 40px;
-  height: 40px;
-  border-radius: 50%;
+  .user__avatar {
+    @include avatar(40px, 40px);
+  }
 }
 
 .sidebar {
-  margin-left: 32px;
+  padding: 33px 0 0 32px;
+  background: $white;
+  /* Настройки для фиксированной позиции, чтобы боковое меню можно было прокручивать */
+  position: fixed;
+  left: 0;
+  top: 83px;
+  height: calc(100% - 114px);
+  overflow-y: auto;
+  width: 12%;
+  &::-webkit-scrollbar {
+    width: 6px;
+  }
+  &::-webkit-scrollbar-track {
+    background: $lightgrey;
+  }
+  &::-webkit-scrollbar-thumb {
+    background: $grey;
+  }
 }
 
 .nav__title {
@@ -142,7 +171,98 @@ body {
     color: $grey;
   }
   .user__avatar {
-    width: 26px;
-    height: 26px;
+    @include avatar(26px, 26px);
   }
+}
+
+.main {
+  background: $lightgrey;
+  padding-left: 350px;
+  padding-top: 116px;
+  width: 100%;
+  height: 100%;
+}
+
+.channel {
+  position: relative;
+  margin-bottom: 50px;
+  .user__avatar {
+    @include avatar(50px, 50px);
+  }
+  .channel__link {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    margin-bottom: 30px;
+  }
+  .channel__name {
+    font-weight: bold;
+    font-size: 26px;
+    line-height: 33px;
+    color: $black;
+    margin-left: 20px;
+  }
+}
+
+.video__link {
+  text-decoration: none;
+}
+
+.video__card {
+  width: 250px;
+}
+
+.video__thumb {
+  width: 250px;
+  height: 150px;
+  overflow: hidden;
+  border-radius: 14px;
+  position: relative;
+  .thumbnail {
+    width: 250px;
+    height: 150px;
+    object-fit: cover;
+  }
+}
+
+.video__title {
+  color: $black;
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 20px;
+  margin-top: 10px;
+  margin-bottom: 4px;
+}
+
+.video__info {
+  color: $grey;
+  font-size: 13px;
+  line-height: 16px;
+  @include flex(row, space-between, center);
+}
+
+.dot {
+  padding: 0 2px;
+}
+
+.video__duration {
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+  background: #000000;
+  mix-blend-mode: normal;
+  opacity: 0.35;
+  border-radius: 12px;
+  font-size: 14px;
+  line-height: 18px;
+  color: $white;
+  padding: 3px 9px;
+}
+
+.slider-buttons {
+  @include flex(row, space-between, center);
+  width: 66px;
+  position: absolute;
+  top: 0;
+  right: 8%;
 }
