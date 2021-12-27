@@ -61,6 +61,12 @@ body {
   margin-right: 169px;
 }
 
+.logo .icon {
+  opacity: 1;
+  width: 116px;
+  height: 25px;
+}
+
 .search__group {
   background: #ebebeb;
   border-radius: 22px;
