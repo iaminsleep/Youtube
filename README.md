@@ -1,2 +1,7 @@
 # Youtube
-Вёрстка сайта видеохостинга Youtube с использованием препроцессора Sass
+Layout of the Youtube video hosting site using the Sass preprocessor
+
+### Technologies:
+- html
+- css
+- sass
