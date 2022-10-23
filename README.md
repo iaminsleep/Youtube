@@ -6,5 +6,5 @@ Layout of the Youtube video hosting site using the Sass preprocessor
 - css
 - sass
 
-Hosting (gh-pages)
+### Hosting (gh-pages)
 https://iaminsleep.github.io/youtube/
